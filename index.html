@@ -148,7 +148,7 @@
   <h3>Uploaded to the cloud (only when you use Cloud Sync)</h3>
   <p>When you create or join a shared book, the following data is uploaded to our cloud storage provider:</p>
   <ul>
-    <li><strong>The EPUB file</strong> — so that other participants can read the same book.</li>
+    <li><strong>The EPUB file</strong> — uploaded temporarily so that other participants can download and read the same book. The file is automatically deleted from the server as soon as the new participant has downloaded it, or after a maximum of 12 hours — whichever comes first. Book files are not stored permanently on our servers.</li>
     <li><strong>Your drawings</strong> — so that other participants can see your illustrations.</li>
     <li><strong>A display name you choose</strong> — shown to other participants so they know whose drawings are whose. This can be any name; it does not have to be your real name.</li>
     <li><strong>A randomly generated device identifier</strong> — used solely to distinguish participants within a shared book. It is not linked to your real identity, device serial number, or any advertising identifier.</li>
@@ -166,22 +166,27 @@
   </ul>
 
   <h2>5. Third-party services</h2>
-  <p>When you use the Cloud Sync feature, data is stored using <strong>Supabase</strong> (supabase.co), a cloud infrastructure provider. Supabase stores the shared book files, drawings, and participant display names on its servers. Supabase's own privacy policy is available at <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</p>
+  <p>When you use the Cloud Sync feature, data is stored using <strong>Supabase</strong> (supabase.co), a cloud infrastructure provider. Supabase stores participant drawings and display names for the duration of the collaboration. Book files (EPUBs) are stored only temporarily for transfer between participants and are automatically deleted. Supabase's own privacy policy is available at <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</p>
   <p>Aside from Supabase (and only when Cloud Sync is actively used), Inkly does not use any other third-party services, SDKs, analytics tools, advertising networks, or external APIs. All code and resources needed to run the app are bundled inside the app itself.</p>
   <p>If you choose to share a drawing using the system "Share" function, your device's operating system handles the sharing, and Inkly is no longer involved once you pick a destination app. What happens after you share is governed by the destination app's own privacy policy.</p>
 
   <h2>6. Cloud Sync and shared books</h2>
-  <p>The Cloud Sync feature allows multiple people to illustrate the same book together. Here is how it works and what to expect:</p>
+  <p>The Cloud Sync feature allows up to 5 people to illustrate the same book together. Here is how it works and what to expect:</p>
   <ul>
-    <li>When you <strong>create</strong> a shared book, the EPUB file and your drawings are uploaded to the cloud, and you receive a unique book code to share with others.</li>
+    <li>When you <strong>create</strong> a shared book, the EPUB file and your drawings are uploaded to the cloud, and you receive a unique book code to share with others. The EPUB file is stored temporarily and is deleted from the server as soon as the invited participant downloads it, or automatically after 12 hours.</li>
     <li>When you <strong>join</strong> a shared book using a code, the book and existing drawings are downloaded to your device, and your own drawings are uploaded for others to see.</li>
+    <li>When you <strong>invite</strong> a new participant to an existing shared book, the EPUB file is re-uploaded temporarily under the same conditions.</li>
     <li>Your drawings are visible to all participants of that shared book, and their drawings are visible to you.</li>
     <li>When a shared book is <strong>exported</strong>, only drawings from participants who gave consent at the time of joining are included.</li>
     <li>You can <strong>leave</strong> a shared book at any time. When you leave, your drawings are removed from the cloud and will disappear from other participants' copies on their next sync. Your local copy retains only your own drawings.</li>
   </ul>
   <p>By creating or joining a shared book, you agree to these terms.</p>
 
-  <h2>7. Permissions</h2>
+  <h2>7. Content responsibility and copyright</h2>
+  <p>By sharing a book through Cloud Sync, you confirm that you have the right to distribute it — for example, because it is in the public domain, published under a permissive license, or you are the author. Inkly does not monitor, verify, or review the content shared through Cloud Sync.</p>
+  <p>If you are a copyright holder and believe that your work is being shared through Inkly without authorization, please contact us at <a href="mailto:himirik@gmail.com">himirik@gmail.com</a> with a description of the copyrighted work and the book code (if known). We will promptly remove the infringing content from our servers upon receiving a valid takedown request.</p>
+
+  <h2>8. Permissions</h2>
   <p>Inkly requests the minimum permissions required to function:</p>
   <ul>
     <li><strong>File access</strong> — needed only when you explicitly pick an EPUB file to open. Inkly uses the system file picker, which gives it access only to the specific file you selected. It cannot read any other files on your device.</li>
@@ -189,7 +194,7 @@
   </ul>
   <p>Inkly does not request access to your location, camera, microphone, contacts, calendar, or any other sensitive data.</p>
 
-  <h2>8. Children's privacy</h2>
+  <h2>9. Children's privacy</h2>
   <p>Inkly is suitable for all ages, including children under 13. The app collects no personal information in offline mode. When Cloud Sync is used, the only data uploaded is a chosen display name (which need not be a real name), a random identifier, book files, and drawings — none of which constitute personal information about a child.</p>
   <p>The app complies with the U.S. Children's Online Privacy Protection Act (COPPA) and the children-related provisions of the EU General Data Protection Regulation (GDPR).</p>
   <p>Parents and guardians can be assured that:</p>
@@ -201,19 +206,19 @@
   </ul>
   <p>If you are a parent or guardian and have any concerns, please contact us at <a href="mailto:himirik@gmail.com">himirik@gmail.com</a>.</p>
 
-  <h2>9. Data security</h2>
+  <h2>10. Data security</h2>
   <p>Local data security depends on the security of your device itself. We recommend keeping your device's operating system up to date and using a screen lock.</p>
   <p>Cloud Sync data is transmitted over HTTPS and stored on Supabase's infrastructure, which provides encryption at rest and in transit. Shared book codes act as access tokens — anyone who knows the code can join the book, so share codes only with people you trust.</p>
-  <p>If you uninstall Inkly, all local data it created (books, drawings, settings) is permanently deleted along with the app. Data uploaded via Cloud Sync remains on the server until you leave the shared book or until all participants have left.</p>
+  <p>If you uninstall Inkly, all local data it created (books, drawings, settings) is permanently deleted along with the app. Drawings uploaded via Cloud Sync remain on the server until you leave the shared book or until all participants have left. Book files (EPUBs) are not stored permanently — they are deleted from the server immediately after a participant downloads them, or automatically after 12 hours.</p>
 
-  <h2>10. Your rights</h2>
+  <h2>11. Your rights</h2>
   <p>Under data protection laws such as the EU GDPR and similar regulations elsewhere, you have rights including the right to access, correct, or delete your personal data. Local data is fully under your control — you can delete it at any time by removing books and drawings within the app, by clearing the app's storage in your device settings, or by uninstalling Inkly.</p>
   <p>To remove your data from Cloud Sync, use the "Leave book" option within the app, which deletes your drawings and display name from the server. If you need assistance with data deletion, contact us at <a href="mailto:himirik@gmail.com">himirik@gmail.com</a>.</p>
 
-  <h2>11. Changes to this policy</h2>
+  <h2>12. Changes to this policy</h2>
   <p>If the way Inkly handles data changes, this policy will be updated and the effective date at the top of this page will change. Material changes will be announced inside the app before they take effect. Continued use of Inkly after such changes means you accept the updated policy.</p>
 
-  <h2>12. Jurisdiction</h2>
+  <h2>13. Jurisdiction</h2>
   <p>Inkly is published from Georgia. This privacy policy is governed by the laws of Georgia, without regard to conflict-of-law principles. To the extent that other privacy laws apply to you based on your location (for example, GDPR in the European Union, CCPA in California, or COPPA for children in the United States), we honor the rights those laws give you.</p>
 
   <div class="contact">
